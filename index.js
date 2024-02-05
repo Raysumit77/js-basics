@@ -469,18 +469,133 @@ console.log({ rest });
 //   console.log ( { resu });
 
 
-  const numeral = [1,2,3];
-  const getDecimal = (numbers) => 
-  numbers.map((number) => String(number).concat(".00"));
-  const rest = getDecimal(numeral);
-  console.log({ rest })
+//   const numeral = [1,2,3];
+//   const getDecimal = (numbers) => 
+//   numbers.map((number) => String(number).concat(".00"));
+//   const rest = getDecimal(numeral);
+//   console.log({ rest })
 
 //write a js function that handles pagination
-const data = [1,2,3,4,5,6,7,8,9,10];
-const page = 1
-const limit = 2
+// const data = [1,2,3,4,5,6,7,8,9,10];
+// const page = 1
+// const limit = 2
 //write a js function that finds the birds aname starting with e character
-const birds = ["parrot","eagles","emus","caracaras","egrets"];
+// const birds = ["parrot","eagles","emus","caracaras","egrets"];
 //result : ['eagles , 'emus','egrets']
 
 
+// const birds = ["parrot","eagles","emus","caracaras","egrets"];
+// const birdsName = (birds) => birds.filter(birds => birds.tolowercase().startwithE);
+// const birdsStartingWithE = findBirdsStartingWithE(birds);
+// console.log(birdsStartingWithE);
+
+// function findBirdsStartingWithE(birdsArray) {
+//     const result = birdsArray.filter(bird => bird.toLowerCase().startsWith('e'));
+//     return result;
+//   }
+  
+//   const birds = ["parrot", "eagles", "emus", "caracaras", "egrets"];
+//   const birdsStartingWithE = findBirdsStartingWithE(birds);
+  
+//   console.log(birdsStartingWithE); // Output: ["eagles", "emus", "egrets"]
+  
+  
+//    const birds = ["parrot", "eagles", "emus", "caracaras", "egrets"];
+//    function findBirdsStartingWithE(birdArray)  {
+//     return birdArray.filter(bird => bird.toLowerCase().startsWith('e'));
+// }
+// const birdsStartingWithE = findBirdsStartingWithE(birds);
+//    console.log(birdsStartingWithE);
+ 
+// const birds = ["parrot", "eagles", "emus", "caracaras", "egrets"];
+// const findBirdsStartingWithE = (birds) =>
+// filterbirds(birds.toLowercase().startsWith('e'));
+// const result = findBirdsStartingWithE(birds);
+// console.log(result);
+
+const characters = [
+    {
+        name: 'Luke Skywalker',
+        height: '172',
+        mass: '77',
+        eye_color: 'blue',
+        gender: 'male',
+    },
+    {
+        name: 'Darth Vader',
+        height: '202',
+        mass: '136',
+        eye_color: 'yellow',
+        gender: 'male',
+    },
+    {
+        name: 'Leia Organa',
+        height: '150',
+        mass: '49',
+        eye_color: 'brown',
+        gender: 'female',
+    },
+    {
+        name: 'Anakin Skywalker',
+        height: '188',
+        mass: '84',
+        eye_color: 'blue',
+        gender: 'male',
+    },
+];
+//1 map 
+const name = characters.map(item => item.name);
+console.log(name);
+//b height
+const height = characters.map(item => item.height);
+console.log(height);
+//d first name
+const firstName = characters.map(item => item.firstName);
+console.log(firstName);
+//c name and height
+const mixData = characters.map(({ name, height }) => ({ name, height }));
+console.log(mixData);
+
+//2 
+ const mass = characters.reduce((accumulator, character) => accumulator + character.mass, 0);
+ console.log(mass);
+ //height 
+ const height2 = characters.reduce((accumulator, character) => accumulator + character.height, 0);
+ console.log(height2);
+ //total charcater
+ const totalCharactersInNames = characters.reduce((accumulator, character) => accumulator + character.name.length, 0);
+console.log(totalCharactersInNames);
+
+//eye color
+const eyeColor = characters.reduce((accumulator, character) => accumulator + character.eyecolor, 0);
+console.log(eyeColor);
+
+//filter
+const characterWithMassGreater = characters.filter(character => character.mass > 100);
+console.log(characterWithMassGreater);
+//
+
+const characterWithMassGreater2 = characters.filter(character => character.mass > 200);
+console.log(characterWithMassGreater2)
+//
+const maleCharacters = characters.filter(character => character.gender === 'male');
+console.log(maleCharacters);
+//
+const femaleCharacters = characters.filter(character => character.gender === 'female');
+console.log(femaleCharacters);
+//sort
+name.sort();
+console.log(name);
+//mass
+//mass.sort();
+//console.log(mass);
+//height
+height.sort();
+console.log(height);
+//implicit function
+//gender
+gender.sort();
+console.log(gender);
+
+
+ 
