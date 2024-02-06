@@ -594,8 +594,39 @@ height.sort();
 console.log(height);
 //implicit function
 //gender
-gender.sort();
-console.log(gender);
+// gender.sort();
+// console.log(gender);
+//every
+const allHaveBlueEyesEvery = characters.every(character => character.eyeColor === "blue");
+console.log("Using every():", allHaveBlueEyesEvery);
+//b
+const allHaveMassGreaterThan40Every = characters.every(character => character.mass > 40);
+console.log("Using every():", allHaveMassGreaterThan40Every);
+//c
+const allShorterThan200Every = characters.every(character => character.height < 200);
+console.log("Using every():", allShorterThan200Every);
+//d
+const allMaleEvery = characters.every(character => character.gender === "male");
+console.log("Using every():", allMaleEvery);
+//some
+const someMale = characters.some(character => character.gender === "male");
+console.log("Using some():", someMale);
+//a
+const someHaveBlueEyes = characters.some(character => character.eyeColor === "blue");
+console.log("Using some():", someHaveBlueEyes);
+//b
+const someTallerThan200 = characters.some(character => character.height > 200);
+console.log("Using some():", someTallerThan200);
+//c
+const someHasMassLessThan50 = characters.some(character => character.mass < 50);
+console.log("Using some():", someHasMassLessThan50);
+
+
+
+
+
+
+
 
 
  
